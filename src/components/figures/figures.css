@@ -1,0 +1,33 @@
+.figure {
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+}
+  
+.circle {
+    border-radius: 100%;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.box {
+    margin-top: 40px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    width: fit-content;
+}
