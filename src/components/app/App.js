@@ -6,8 +6,6 @@ import Figures from '../figures';
 import FilterShapes from '../filterShapes';
 import Burger from '../burger';
 
-
-
 export default class App extends React.Component {
 
   state = {
@@ -137,18 +135,32 @@ export default class App extends React.Component {
         "color": "yellow",
         "dark": false
       }
-    ]
+    ],
+    green: true,
+    numberOfColumns: 4,
   }
 
-  
+  filterItem = () => {
+    
+    return this.state.shapes.filter(item => {
+      if(!this.state.green) {
+        return item.color !== "green"
+      }
+      return item
+    })
+  }
+
+  getNumberOfColumns = (value) => {
+    this.setState({numberOfColumns: value})
+  }
 
   render() {
     return (
       <div className='container'>
         <Header />
         <FilterShapes />
-        <Burger />
-        <Figures shapes={this.state.shapes}/>
+        <Burger getNumberOfColumns={this.getNumberOfColumns}/>
+        <Figures shapes={this.filterItem()} numberOfColumns={this.state.numberOfColumns}/>
       </div>
     )
   }

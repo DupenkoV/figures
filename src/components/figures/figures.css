@@ -24,10 +24,32 @@
     background-color: yellow;
 }
 
-.box {
+.box4 {
     margin-top: 40px;
     display: grid;
-    gap: 10px;
+    gap: 100px;
     grid-template-columns: repeat(4, 1fr);
+    width: fit-content;
+}
+
+.box3 {
+    margin-top: 40px;
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    width: fit-content;
+}
+.box2 {
+    margin-top: 40px;
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(2, 1fr);
+    width: fit-content;
+}
+.box1 {
+    margin-top: 40px;
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(1, 1fr);
     width: fit-content;
 }
