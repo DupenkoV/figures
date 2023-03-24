@@ -1,3 +1,3 @@
-import Figures from "./Figures";
+import {Figures} from "./Figures";
 
 export default Figures;

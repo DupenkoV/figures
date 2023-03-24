@@ -1,41 +1,37 @@
-import React from "react";
+import {React, useState} from "react";
 import "./burger.css"
 
 import FilterColor from "../filterColor/FilterColor";
 import Radio from "../Radio/Radio";
-import InputColumn from "../inputColumn/inpitColumn";
+import InputColumn from "../inputColumn/inputColumn";
 
-export default class Burger extends React.Component {
-    constructor() {
-        super();
-
-        this.state = {
-            active: false,
-        }
-    }
+const Burger = (props) => {
+    const [active, setActive] = useState(false)
     
+    const burger = (
+        <div className="burger"
+            onClick={() => {setActive((prevState) => !prevState)}}>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    )
 
-    activated = () => {
-        this.setState({active: true})
-    }
-
-    render() {
-        if(this.state.active) {
-            return (
-                <>
-                    <FilterColor />
-                    <Radio />
-                    <InputColumn getNumberOfColumns={this.props.getNumberOfColumns}/>
-                </>
-            )
-        }
+    if(active) {
         return (
-            <div className="burger"
-                onClick={this.activated}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <>
+                {burger}
+                <FilterColor />
+                <Radio />
+                <InputColumn getNumberOfColumns={props.getNumberOfColumns}/>
+            </>
         )
     }
+    return (
+        <>
+            {burger}
+        </>
+    )
 }
+
+export default Burger;
