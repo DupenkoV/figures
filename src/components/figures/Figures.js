@@ -1,11 +1,14 @@
-import React from "react";
+import React  from "react";
 import "./figures.css"
 import { useSelector } from "react-redux";
 
 
 
-export const Figures = ({shapes}) => {
-    const numberOfColumns = useSelector(state => state.numberOfColumns)
+
+export const Figures = () => {
+    const numberOfColumns = useSelector(state => state.numbersOfColumn)
+    const shapes = useSelector(state => state.shapes)
+    
     const figures = shapes.map((item, id) => {
 
         return (
