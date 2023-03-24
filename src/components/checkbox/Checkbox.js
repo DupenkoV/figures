@@ -4,13 +4,13 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setFilter } from '../../slice/filterSlice'
 
 
-export const Checkbox = ({label}) => {
-  const checked = useSelector(state => state.filter[label])
+export const Checkbox = ({label, id}) => {
+  const checked = useSelector(state => state.filter[id])
   
   const dispatch = useDispatch()
   const handleChange = () => {
     dispatch(setFilter({
-        label,
+        id,
         checked: !checked
     }))
   }
@@ -18,7 +18,7 @@ export const Checkbox = ({label}) => {
   return (
     <div>
         <label>
-            <input type='checkbox' checked={checked} onChange={handleChange} className='checkbox'/>
+            <input type='checkbox' checked={checked} onChange={handleChange} className='checkbox' id={id}/>
             {label}
         </label>
     </div>

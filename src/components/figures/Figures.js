@@ -1,6 +1,8 @@
-import React  from "react";
+import React, { useEffect }  from "react";
 import "./figures.css"
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { addFilter } from "../../slice/shapesSlice";
+import { filteredFhapes } from "../../slice/shapesSlice";
 
 
 
@@ -8,7 +10,11 @@ import { useSelector } from "react-redux";
 export const Figures = () => {
     const numberOfColumns = useSelector(state => state.numbersOfColumn)
     const shapes = useSelector(state => state.shapes)
-    
+    const filter = useSelector(state => state.filter)
+    console.log(filteredFhapes(shapes, filter))
+    const dispatch = useDispatch()
+
+
     const figures = shapes.map((item, id) => {
 
         return (

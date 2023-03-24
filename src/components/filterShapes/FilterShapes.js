@@ -5,8 +5,8 @@ import Checkbox from "../checkbox";
 const FilterShapes = () => {
     return (
         <div className="checkbox-group shapes">
-            <Checkbox label={'круги'}/>
-            <Checkbox label={'квадраты'}/>
+            <Checkbox label={'круги'} id={'circle'}/>
+            <Checkbox label={'квадраты'} id={'square'}/>
         </div>
     )
 }

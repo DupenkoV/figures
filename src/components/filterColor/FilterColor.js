@@ -6,10 +6,10 @@ const FilterColor = () =>  {
 
     return (
         <div className="checkbox-group">
-            <Checkbox label={'красный'}/>
-            <Checkbox label={'синий'}/>
-            <Checkbox label={'желтый'}/>
-            <Checkbox label={'зеленый'}/>
+            <Checkbox label={'красный'} id={'red'}/>
+            <Checkbox label={'синий'} id={'blue'}/>
+            <Checkbox label={'желтый'} id={'yellow'}/>
+            <Checkbox label={'зеленый'} id={'green'}/>
         </div>
         )
 }

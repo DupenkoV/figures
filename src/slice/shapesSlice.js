@@ -132,8 +132,12 @@ export const shapesSlice = createSlice({
     name: "@@shapes",
     initialState,
     reducers: {
-
     }
 })
 
 export const shapesReducer = shapesSlice.reducer;
+export const {addFilter} = shapesSlice.actions;
+
+export const filteredFhapes = (shapes, filter) => {
+
+}

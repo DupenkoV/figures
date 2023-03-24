@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    'красный': true,
-    'синий': true,
-    'желтый': true,
-    'зеленый': true,
-    'круги': true,
-    'квадраты': true,
+    'red': true,
+    'blue': true,
+    'yellow': true,
+    'green': true,
+    'circle': true,
+    'square': true,
 }
 
 const filterSlice = createSlice({
@@ -14,8 +14,8 @@ const filterSlice = createSlice({
     initialState,
     reducers: {
         setFilter: (state, action) => {
-            const {label, checked} = action.payload;
-            state[label] = checked;
+            const {id, checked} = action.payload;
+            state[id] = checked;
         }
     }
 })
