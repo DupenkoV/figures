@@ -138,6 +138,3 @@ export const shapesSlice = createSlice({
 export const shapesReducer = shapesSlice.reducer;
 export const {addFilter} = shapesSlice.actions;
 
-export const filteredFhapes = (shapes, filter) => {
-
-}

@@ -5,14 +5,11 @@ import { setFilter } from '../../slice/filterSlice'
 
 
 export const Checkbox = ({label, id}) => {
-  const checked = useSelector(state => state.filter[id])
+  const checked = useSelector(state => state.filter.find(item => item === id))
   
   const dispatch = useDispatch()
   const handleChange = () => {
-    dispatch(setFilter({
-        id,
-        checked: !checked
-    }))
+    dispatch(setFilter(id))
   }
 
   return (
