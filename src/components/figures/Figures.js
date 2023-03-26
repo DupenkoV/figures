@@ -9,11 +9,11 @@ import { useSelector } from "react-redux";
 
 export const Figures = () => {
     const numberOfColumns = useSelector(state => state.numbersOfColumn)
-
+    const shapes = useFigure()
 
     return  (               
             <div className={`container box${numberOfColumns}`} >
-                {useFigure().map((item, id) => {
+                {shapes.map((item, id) => {
                 return (
                 <div className={`figure ${item.color} ${item.form}`} key={id}> </div>
                 )

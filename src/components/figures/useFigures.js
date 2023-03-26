@@ -6,6 +6,6 @@ export const useFigure = () => {
     return shapes.filter(item => {
         const color = item.color;
         const form = item.form
-        return color === filter.find((item) => item === color) && filter.find((item) => item === form)
+        return filter.find((item) => item === color) && filter.find((item) => item === form)
     })
 }

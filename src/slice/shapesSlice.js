@@ -21,7 +21,6 @@ const initialState = [
       "color": "red",
       "dark": false
     },
-  
     {
       "form": "circle",
       "color": "blue",
@@ -42,7 +41,6 @@ const initialState = [
       "color": "green",
       "dark": false
     },
-    
     {
       "form": "square",
       "color": "yellow",
@@ -63,7 +61,6 @@ const initialState = [
       "color": "blue",
       "dark": false
     },	
-    
     {
       "form": "square",
       "color": "blue",
@@ -84,7 +81,6 @@ const initialState = [
       "color": "blue",
       "dark": true
     },
-  
     {
       "form": "circle",
       "color": "blue",
@@ -105,7 +101,6 @@ const initialState = [
       "color": "green",
       "dark": false
     },
-  
     {
       "form": "square",
       "color": "blue",
@@ -137,4 +132,3 @@ export const shapesSlice = createSlice({
 
 export const shapesReducer = shapesSlice.reducer;
 export const {addFilter} = shapesSlice.actions;
-
