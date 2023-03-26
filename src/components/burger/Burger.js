@@ -2,7 +2,7 @@ import {React, useState} from "react";
 import "./burger.css"
 
 import FilterColor from "../filterColor/FilterColor";
-import Radio from "../Radio/Radio";
+import {Radio} from "../Radio/Radio";
 import InputColumn from "../inputColumn/inputColumn";
 
 const Burger = (props) => {

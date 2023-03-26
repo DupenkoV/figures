@@ -127,8 +127,17 @@ export const shapesSlice = createSlice({
     name: "@@shapes",
     initialState,
     reducers: {
+      getDark: (state) => {
+        state = initialState
+        return state.filter(item => item.dark === true)
+      },
+      getLigth: (state) => {
+        state = initialState
+        return state.filter(item => item.dark === false)
+      },
+      getAll: (state) => state = initialState
     }
 })
 
 export const shapesReducer = shapesSlice.reducer;
-export const {addFilter} = shapesSlice.actions;
+export const {getDark, getAll, getLigth} = shapesSlice.actions;
