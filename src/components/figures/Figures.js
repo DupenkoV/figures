@@ -13,7 +13,8 @@ export const Figures = () => {
     const dispatch = useDispatch()
     const shapes2 = shapes.filter(item => {
         const color = item.color;
-        return color == filter.find((item) => item === color)
+        const form = item.form
+        return color == filter.find((item) => item === color) && filter.find((item) => item === form)
     })
 
 
