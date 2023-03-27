@@ -1,4 +1,4 @@
-import React  from "react";
+import React, {useCallback, useEffect, useState}  from "react";
 import "./figures.css"
 import { useFigure } from "./useFigures";
 import { useSelector } from "react-redux";
@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 
 export const Figures = () => {
     const numberOfColumns = useSelector(state => state.numbersOfColumn)
-    const shapes = useFigure()
+    let shapes = useFigure()
 
     return  (               
             <div className={`container box${numberOfColumns}`} >

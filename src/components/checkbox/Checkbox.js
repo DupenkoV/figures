@@ -19,7 +19,7 @@ export const Checkbox = ({label, id}) => {
   return (
     <div>
         <label>
-            <input type='checkbox' checked={checked} onChange={handleChange} className='checkbox' id={id}/>
+            <input type='checkbox' checked={!checked} onChange={handleChange} className='checkbox' id={id}/>
             {label}
         </label>
     </div>
