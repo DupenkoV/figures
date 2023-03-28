@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { nanoid } from "@reduxjs/toolkit";
 
 const initialState = [
     {
@@ -123,19 +124,25 @@ const initialState = [
     }
   ]
 
+const initialStateId = initialState.map(item => {
+  return {
+    ...item,
+    id: nanoid()
+  }
+})
 export const shapesSlice = createSlice({
     name: "@@shapes",
-    initialState,
+    initialState: initialStateId,
     reducers: {
       getDark: (state) => {
-        state = initialState
+        state = initialStateId
         return state.filter(item => item.dark === true)
       },
       getLigth: (state) => {
-        state = initialState
+        state = initialStateId
         return state.filter(item => item.dark === false)
       },
-      getAll: (state) => state = initialState
+      getAll: (state) => state = initialStateId
     }
 })
 
